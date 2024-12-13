@@ -37,7 +37,20 @@ ${jsonencode(
            "Effect": "Allow",
            "Action": "s3:PutObject",
            "Resource": "*",
-         }
+         },
+         {
+                     "Effect": "Allow",
+                     "Action": [
+                         "logs:CreateLogGroup",
+                         "logs:CreateLogStream",
+                         "logs:PutLogEvents",
+                         "logs:PutMetricFilter",
+                         "logs:PutRetentionPolicy"
+                     ],
+                     "Resource": [
+                         "*"
+                     ]
+                 }
   ]
 }
 )
