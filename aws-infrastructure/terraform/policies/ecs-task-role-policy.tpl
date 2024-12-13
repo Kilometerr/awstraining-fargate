@@ -39,18 +39,12 @@ ${jsonencode(
            "Resource": "*",
          },
          {
-                     "Effect": "Allow",
-                     "Action": [
-                         "logs:CreateLogGroup",
-                         "logs:CreateLogStream",
-                         "logs:PutLogEvents",
-                         "logs:PutMetricFilter",
-                         "logs:PutRetentionPolicy"
-                     ],
-                     "Resource": [
-                         "*"
-                     ]
-                 }
+               "Effect": "Allow",
+               "Action": [
+                 "sns:Publish"
+               ],
+               "Resource": "*"
+              }
   ]
 }
 )
